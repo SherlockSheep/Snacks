@@ -1,0 +1,10 @@
+from flask_mail import Message
+from app import mail
+msg = Message("Hi!This is a test ",sender='598769281@qq.com', recipients=['kazula@sina.cn'])
+msg.body = "This is a first email"
+with app.app_context():
+	mail.send(msg)     
+
+export MAIL_USERNAME='598769281@qq.com'
+export MAIL_PASSWORD='ypxlguyxarmzbdag'
+export FLASKY_ADMIN='598769281@qq.com'

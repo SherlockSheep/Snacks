@@ -1,0 +1,60 @@
+http --json --auth : POST http://127.0.0.1:5000/api/v1.0/register/ \
+email='1234567@11.com' username='Ss' password='dog'
+
+http --json --auth 1276458113@qq.com:cat GET http://127.0.0.1:5000/api/v1.0/posts
+
+http --json --auth 1276458113@qq.com:cat GET http://127.0.0.1:5000/api/v1.0/snack_tags/1
+
+http --json --auth : GET http://127.0.0.1:5000/api/v1.0/snack_tags/1
+
+http --json --auth : GET http://127.0.0.1:5000/api/v1.0/tags/
+
+http --json --auth : POST http://127.0.0.1:5000/api/v1.0/new_tag/ \
+literal='饮料'
+
+http --json --auth : GET http://127.0.0.1:5000/api/v1.0/snacks/
+
+http --json --auth : POST http://127.0.0.1:5000/api/v1.0/new_snack/ \
+name='亲嘴烧' manufacturer='卫龙'
+
+http --json --auth : GET http://127.0.0.1:5000/api/v1.0/taged_snacks/1
+
+http --json --auth : POST http://127.0.0.1:5000/api/v1.0/put_tag_snack/1/1
+
+http --json --auth : POST http://127.0.0.1:5000/api/v1.0/put_tag_post/1/1
+
+http --json --auth : GET http://127.0.0.1:5000/api/v1.0/taged_posts/1
+
+http --json --auth : POST http://127.0.0.1:5000/api/v1.0/relate_post_snack/1/1
+
+http --json --auth : GET http://127.0.0.1:5000/api/v1.0/related_snacks/1
+
+http --json --auth : POST http://127.0.0.1:5000/api/v1.0/user_mark_snack/1/1
+
+http --json --auth : GET http://127.0.0.1:5000/api/v1.0/user_marked_snacks/1
+
+http --json --auth : GET http://127.0.0.1:5000/api/v1.0/snack_marking_users/1
+
+http --json --auth : POST http://127.0.0.1:5000/api/v1.0/user_subscribe_tag/1/1
+
+http --json --auth : GET http://127.0.0.1:5000/api/v1.0/user_subscribed_tags/1
+
+http --json --auth : GET http://127.0.0.1:5000/api/v1.0/snack_pic/3479273
+
+http -f POST http://127.0.0.1:5000/api/v1.0/upload file@~/documents/MATLAB/openresultjam.csv
+
+http -f POST http://127.0.0.1:5000/api/v1.0/upload name="try1.csv" file@~/documents/MATLAB/openresultjam.csv
+
+http --json --auth : GET http://127.0.0.1:5000/api/v1.0/user_ava/1
+
+http -f POST http://127.0.0.1:5000/api/v1.0/upload_user_ava/2 file@~/downloads/storage_box.jpg
+
+http -f POST http://127.0.0.1:5000/api/v1.0/upload_user_ava/2 file@~/downloads/girl-in-a-box.jpg
+
+http://60.205.214.95:5000/api/v1.0/user_ava/1
+
+http --json --auth 1276458113@qq.com:cat GET http://60.205.214.95:5000/api/v1.0/valid_users/
+
+http --json --auth : GET http://127.0.0.1:5000/api/v1.0/snacks_by_keyword/ keyword="%三%"
+
+http --json --auth : GET http://60.205.214.95:5000/api/v1.0/users/1
